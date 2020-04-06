@@ -1,0 +1,455 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Dosis', sans-serif;
+}
+
+button {
+  border: none;
+  padding: 5px;
+  margin: 0;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.framework {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.frameworkHeader {
+  height: 40px;
+  padding: 6px;
+  border-bottom: 5px solid #4285f4;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.frameworkBody {
+  width: 100%;
+}
+
+.frameworkBodySection {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.frameworkBodySectionLeft {
+  width: 20%;
+
+}
+
+.frameworkBodySectionRight {
+  width: 80%;
+  border-left: 3px solid #f4b400;
+}
+
+.userAcctControl {
+  height: 300px;
+}
+
+.userAcctControlInput {
+  height: 30px;
+  width: calc(100% - 30px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 5px 15px;
+}
+
+.userAcctControlMessage {
+  height: 40px;
+  padding: 8px;
+  border-bottom: 3px solid #0f9058;
+  text-align: center;
+}
+
+.userAcctControlButtonBlock {
+  padding: 15px;
+  text-align: center;
+}
+
+.userAcctControlButton {
+  width: 100%;
+  margin-bottom: 5px;
+  font-size: 12px;
+  background-color: #db4437;
+  color: #fff;
+}
+
+.frameworkMainBlock {
+  width: 100%;
+}
+
+.frameworkMainHeader {
+  height: 40px;
+  border-bottom: 3px solid #ccc;
+}
+
+.calendarControl {
+  height: 100%;
+}
+
+.calendarControlViewControlBlock,
+.calendarControlRangeSelectorBlock,
+.calendarControlTodayButtonBlock,
+.calendarControlMonthButtonBlock {
+  display: inline-block;
+  height: 100%;
+  padding: 4px 6px;
+  vertical-align: top;
+}
+
+.calendarControlViewControlButtonAgenda {
+  width: 100%;
+  margin-left: 5px;
+  font-size: 12px;
+  border: 2px solid #0f9058;
+  background-color: #fff;
+  color: #0f9058;
+}
+
+.calendarControlRangeSelectorBlock {
+  margin-left: 15px;
+}
+
+.calendarControlTodayButtonBlock {
+  margin-left: 15px;
+}
+
+.calendarControlMonthButtonBlock {
+  margin-left: 15px;
+}
+
+.calendarYearSelector,
+.calendarMonthSelector {
+  height: 30px;
+  width: 70px;
+  border: 2px solid #f4b400;
+  font-size: 15px;
+  background-color: #fff;
+  color: #f4b400;
+}
+
+.calendarControlTodayButton {
+  width: 100%;
+  font-size: 12px;
+  border: 2px solid #db4437;
+  background-color: #fff;
+  color: #db4437;
+}
+
+.calendarControlMonthButton {
+  font-size: 12px;
+  border: 2px solid #4285f4;
+  background-color: #fff;
+  color: #4285f4;
+}
+
+.frameworkMainBody {
+  width: 100%;
+}
+
+.calendarHeaderContainer {
+  height: 40px;
+  padding: 7px;
+  border-bottom: 3px solid #4285f4;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.calendarHeaderDayCell,
+.calendarDayCell {
+  display: inline-block;
+  width: 13%;
+  vertical-align: top;
+}
+
+.calendarWeekHeaderRow {
+  border-bottom: 1px solid #db4437;
+}
+
+.calendarHeaderDayCell {
+  height: 30px;
+  padding-top: 4px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calendarDayCell {
+  height: 150px;
+}
+
+.calendarDayCellHeader {
+  height: 30px;
+  padding: 3px 7px;
+  font-weight: 600;
+  border: 1.5px solid #fff;
+  background-color: #f4b400;
+  color: #fff;
+}
+
+.calendarEventTag,
+.calendarEventTime,
+.calendarEventCtrl,
+.calendarEventContentContainer {
+  display: inline-block;
+  font-size: 12px;
+}
+
+.calendarEventTag {
+  position: relative;
+  top: 3px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.calendarEventTagred {
+  background-color: #db4437;
+}
+.calendarEventTagorange {
+  background-color: #ffa500;
+}
+.calendarEventTagyellow {
+  background-color: #f4b400;
+}
+.calendarEventTaggreen {
+  background-color: #0f9058;
+}
+.calendarEventTagcyan {
+  background-color: #008080;
+}
+.calendarEventTagblue {
+  background-color: #4285f4;
+}
+.calendarEventTagpurple {
+  background-color: #800080;
+}
+
+.calendarEventTime {
+  position: relative;
+  left: 10px;
+}
+
+.calendarEventCtrl {
+  display: none;
+  position: absolute;
+  top: 1px;
+  right: 2px;
+}
+
+.calendarEvent {
+  position: relative;
+  height: 25px;
+  border: 2px solid #4285f4;
+  border-radius: 15px;
+  color: #4285f4;
+}
+
+.calendarEvent:hover .calendarEventCtrl {
+  display: block;
+}
+
+.calendarEvent:hover .calendarEventContentContainer {
+  display: block;
+}
+
+.calendarEventCtrlButton {
+  width: 50px;
+  height: 18px;
+  background-color: #4285f4;
+  border-radius: 30px;
+  font-size: 8px;
+  color: #fff;
+  opacity: .8;
+}
+
+.calendarEventContentContainer {
+  display: none;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 150px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #4285f4;
+  background-color: #fff;
+}
+
+.calendarEventContentContainer .calendarEventTime {
+  left: 0;
+}
+
+.calendarScheduleEvent {
+  position: relative;
+  border: 2px solid #4285f4;
+  border-radius: 15px;
+  color: #4285f4;
+}
+
+.calendarScheduleEventTag,
+.calendarScheduleEventDate,
+.calendarScheduleEventTime,
+.calendarScheduleEventContentContainer {
+  display: inline-block;
+}
+
+.calendarScheduleEventTag {
+  position: relative;
+  top: 5px;
+  left: 6px;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.calendarScheduleEventTagred {
+  background-color: #db4437;
+}
+.calendarScheduleEventTagorange {
+  background-color: #ffa500;
+}
+.calendarScheduleEventTagyellow {
+  background-color: #f4b400;
+}
+.calendarScheduleEventTaggreen {
+  background-color: #0f9058;
+}
+.calendarScheduleEventTagcyan {
+  background-color: #008080;
+}
+.calendarScheduleEventTagblue {
+  background-color: #4285f4;
+}
+.calendarScheduleEventTagpurple {
+  background-color: #800080;
+}
+
+.calendarScheduleEventContentContainer {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 150px;
+  width: 200px;
+  padding: 5px;
+  border: 2px solid #4285f4;
+  border-radius: 10px;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.calendarScheduleEvent:hover .calendarScheduleEventContentContainer {
+  display: block;
+}
+
+.calendarFormContainer {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 3px solid #db4437;
+}
+
+.calendarEventFormTitleBlock,
+.calendarEventFormDatetimeBlock {
+  height: 40px;
+  padding: 15px;
+}
+
+.calendarEventFormTimeInputLabel,
+.calendarEventFormTagSelectLabel,
+.calendarEventFormCadenceInputLabel,
+.calendarEventFormRepeatInputLabel {
+  margin: 0 10px 0 20px;
+}
+
+.calendarEventFormTitleInput {
+  width: 300px;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormDateInput {
+  width: 300px;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormTimeInput {
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormTagSelect {
+  height: 30px;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormCadenceInput {
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormRepeatInput {
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.calendarEventFormContentInput {
+  margin: 15px;
+  margin-top: 50px;
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.calendarEventFormMapBlock {
+  margin: 15px;
+  width: 100%;
+  height: 300px;
+}
+
+.calendarEventFormMapCtrlButton {
+  margin-left: 15px;
+  width: 100%;
+  font-size: 12px;
+  background-color: #db4437;
+  color: #fff;
+}
+
+.calendarEventFormButtonSubmit {
+  margin: 15px;
+  width: 150px;
+  font-size: 12px;
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.calendarEventFormButtonCancel {
+  margin: 15px;
+  font-size: 12px;
+}
+
